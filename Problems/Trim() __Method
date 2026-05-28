@@ -1,0 +1,39 @@
+The JavaScript `String.trim()` method explained
+beginners
+In JavaScript, the trim() method removes whitespace from both ends of a string. It returns a new copy of the string with whitespace removed.
+
+Syntax
+string.trim();
+
+
+Example:
+const string = "  Hello World!  ";
+console.log(string.trim()); // "Hello World!"
+
+Parameters
+The trim() method does not take any parameters.
+
+Return value
+A new string with whitespace removed from both ends while leaving the original string unchanged.
+
+Alternative methods
+If you want to remove whitespace either from the beginning or the end of a string, you can use the trimStart() or trimEnd() methods.
+
+const string = "  Hello World!  ";
+console.log(string.trimStart());
+// "Hello World!  "
+
+console.log(string.trimEnd());
+// "  Hello World!"
+
+console.log(string.trim());
+// "Hello World!"
+
+console.log(string);
+// "  Hello World!  "
+Alternatively, it's possible to use the regular expression to achieve the same result.
+
+const string = "  Hello World!  ";
+console.log(string.replace(/^\s+|\s+$/g, ""));
+// "Hello World!"
+
