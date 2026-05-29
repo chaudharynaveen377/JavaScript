@@ -1,36 +1,14 @@
- //write a function findLongestWord that takes a string as input ans returns the 
-// longest word in string if there are mutiple word retuns the first one encountered
 
-
-function findLongestWord() {
-
-    let x = prompt("Enter string");
-
-    let arr = x.trim().split(' ');
-
-    console.log(arr);
-    let ans=0;
-    arr.forEach((x)=>{
-        ans=Math.max(ans,x.length)
-    })
-    console.log(ans);
-}
-function findLongestWord1() {
-
-    let x = prompt("Enter string");
-
-   
-    let ans=0;
-    let string="";
-    for(let ch of x.split(' ')){
-      if(ans<ch.length){
-          ans=ch.length;
-          string=ch;
-      }
+function HashtagGenerator( str){
+    if(str.length >180 || str.length ==0)return false;
+    
+    let hassedString="#";
+    for(let s of str.trim().split(/\s+/)){
+        hassedString+=s[0].toUpperCase()+s.slice(1);
     }
-    console.log(ans);
-    console.log(string);
+    return hassedString;
 }
+ let x = prompt("Enter string");
 
-findLongestWord1();
-findLongestWord();
+
+console.log(HashtagGenerator(x));
