@@ -1,0 +1,19 @@
+ 
+ 
+ function countChar(a,b){
+     if(b.length==0 || a.length==0)return;
+     
+     let count=0;
+     for(let s of a.trim()){
+        
+         if(s==b){
+             count++;
+         }
+     }
+     return count;
+ }
+
+ 
+ let x=prompt("enter the strig ")
+ let y=prompt("character ")
+ console.log(countChar(x,y));
