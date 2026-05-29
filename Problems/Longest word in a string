@@ -11,4 +11,6 @@ function HashtagGenerator( str){
  let x = prompt("Enter string");
 
 
+
+
 console.log(HashtagGenerator(x));
