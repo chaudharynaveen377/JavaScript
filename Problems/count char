@@ -13,6 +13,8 @@
      return count;
  }
 
+
+
  
  let x=prompt("enter the strig ")
  let y=prompt("character ")
