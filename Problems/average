@@ -1,0 +1,10 @@
+// average 
+
+const avg=(arr)=>{
+    const res=arr.reduce((acc,curr)=>{
+        return acc+(curr)
+    },0)/arr.length
+    return res
+}
+
+console.log(avg([10,10,10,12]))
