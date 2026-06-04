@@ -1,0 +1,12 @@
+// sum of digits 
+
+const sum=(val)=>{
+    let arr=Array.from(String(val),Number);
+    console.log(arr)
+    
+    let ans=arr.reduce((acc,curr)=>{
+       return acc+=curr;
+    },0)
+    return ans;
+}
+console.log(sum(1234))
