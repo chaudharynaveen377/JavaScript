@@ -24,13 +24,27 @@ const check=(str)=>{
     return true;
 }
 
+const way2=(str)=>{
+    str=str.toLowerCase();
+let res=str.split("").reverse().join("").split(" ").join("");
+
+console.log(res);
+console.log(res===str);
+    
+}
+
 const removeSpaces=(str)=>{
     let res="";
     for( let val of str.split(' ')){
         res+=val;
     }
-    console.log(res);
+    let ans=""
+    for( let val of res.split(',')){
+        ans+=val;
+    }
+    console.log(ans);
 }
 
 console.log(check("A man, A plan , a canal , panama"))
-removeSpaces("  abc   sds ");
+removeSpaces("  abc , , , , ,  sds ");
+way2("abba")
