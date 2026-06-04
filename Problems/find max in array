@@ -1,0 +1,21 @@
+//  find max in array
+
+const findMax=(arr)=>{
+    let max=0;
+    for( let val of arr){
+        max=Math.max(max,val);
+    }
+    
+    return max;
+}
+for(let ch in [10,20,30]){
+    console.log(ch +" "+ [10,20,30][ch])
+}
+
+
+const method=(arr)=>{
+    return Math.max(...arr)
+}
+// Math.max(10, 20, 5, 40, 30);
+console.log(findMax([10,20,30,33]))
+console.log(method([10,20,30,33]))
