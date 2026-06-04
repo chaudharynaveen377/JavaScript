@@ -1,0 +1,8 @@
+const check=(arr,brr)=>{
+    if(arr.length!=brr.length)return false;
+return  arr.every((val,idx)=>{
+        val==brr[idx]
+    })
+}
+
+console.log(check([10,11],[10,20]))
