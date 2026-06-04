@@ -1,0 +1,36 @@
+//  check palindrome or not
+
+const check=(str)=>{
+    let i=0;
+    let j=str.length-1;
+    str=str.toLowerCase();
+    
+    while(i<j){
+        if(str[i]==' ' || str[i]==',' || str[j]==' ' || str[j]==','){
+            if(str[i]==' ' || str[i]==','){
+                i++;
+            }if(str[j]==' ' || str[j]==',' ){
+                j--
+            }
+        }else{
+        if(str[i]!=str[j]){
+            return false;
+        }
+        i++;
+        j--;
+        }
+    }
+    
+    return true;
+}
+
+const removeSpaces=(str)=>{
+    let res="";
+    for( let val of str.split(' ')){
+        res+=val;
+    }
+    console.log(res);
+}
+
+console.log(check("A man, A plan , a canal , panama"))
+removeSpaces("  abc   sds ");
