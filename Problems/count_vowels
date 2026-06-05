@@ -1,0 +1,16 @@
+const count=(str)=>{
+    str=str.toLowerCase();
+    let arr=str.split("");
+    // let brr=[...str];
+    // let crr=Array.from(str);
+    let vow=['a','e','i','o','u'];
+    
+    return arr.reduce((acc,curr)=>{
+        if(vow.includes(curr)){
+           acc+=1;
+        }
+        return acc;
+    },0)
+}
+
+console.log(count("laknjdaubce"))
