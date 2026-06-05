@@ -1,0 +1,25 @@
+// to camel case and to snake case
+
+const toCamelCase=(str)=>{
+    let res="";
+    let arr=str.split(" ");
+    
+    arr.forEach((val,idx)=>{
+        let temp=val;
+        if(idx!=0 && temp.length>0){
+           temp= temp[0].toUpperCase()+ temp.slice(1);
+        }
+        res+=temp;
+    })
+    return res;
+    
+}
+
+
+const toSnakeCase=(str)=>{
+    let arr=str.replace(/\s+/g, " ").trim().split(" ");
+    
+    return arr.join('-');
+}
+console.log(toCamelCase("kjakf   annefk kjnafek  "))
+console.log(toSnakeCase("kjakf   annefk kjnafek  "))
