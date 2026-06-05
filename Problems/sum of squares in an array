@@ -1,0 +1,10 @@
+// sum of squares in an array
+
+const sumOfSquares=(arr)=>{
+    return arr.reduce((acc,curr)=>{
+        acc+=curr*curr;
+        return acc
+    },0)
+}
+
+console.log(sumOfSquares([1,2,3]))
