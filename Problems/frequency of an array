@@ -1,1 +1,39 @@
 
+// frequency of an array 
+// using map()
+const freq=(arr)=>{
+
+    let mp=new Map();
+    
+    for(x of arr){
+        if(mp.has(x)){
+            mp.set(x,mp.get(x)+1);
+        }else{
+            mp.set(x,1);
+        }
+    }
+    return mp;
+}
+
+// using object
+
+const way2=(arr)=>{
+    let obj={};
+    
+    for(let x of arr){
+        if(obj[x]){
+            obj[x]=obj[x]+1;
+        }else{
+            obj[x]=1;
+        }
+    }
+    return obj;
+}
+
+
+
+let arr=[10,20,30,40,10];
+
+console.log(freq(arr))
+console.log(way2(arr))
+console.log(typeof way2(arr)['10'])
