@@ -6,7 +6,7 @@ function HashtagGenerator( str){
     
     let hassedString="#";
     for(let s of str.split(" ")){
-        hassedString+=s.toUpperCase();
+        hassedString+=s.toUpperCase();       
     }
     return hassedString;
 }
